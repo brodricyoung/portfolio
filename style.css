@@ -70,10 +70,12 @@ nav ul li a:hover {
 }
 
 #nav.active {display: block;}
-#nav.active u1 {
+#nav.active ul {
     display: block;
     width: 100%;
     text-align: left;
+    border-bottom: 5px solid #ddd;
+    border-top: 3px solid #ddd;
 }
 #nav.active ul li {
     width: 100%;
@@ -255,7 +257,7 @@ footer {
         display: none;
         width: 100%;
         position: absolute;
-        top: 40px;
+        top: 45px;
         left: 0;
         background-color: #333;
         z-index: 999;
