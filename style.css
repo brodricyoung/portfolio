@@ -29,6 +29,20 @@ header p {
     margin: 0;
 }
 
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
 nav {
     display: flex;
     gap: 1.5rem;
@@ -50,6 +64,24 @@ nav ul li a {
 }
 
 nav ul li a:hover {
+    color: #333;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+#nav.active {display: block;}
+#nav.active u1 {
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+#nav.active ul li {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-top: 2px solid #ddd;
+}
+#nav.active ul li a:hover {
+    padding: 0.5rem 1rem;
     color: #333;
     background-color: #fff;
     border-radius: 10px;
@@ -203,36 +235,59 @@ footer {
     margin-top: 2rem;
 }
 
+/* Mobile styling */
 @media (max-width: 768px) {
-    #hero h2 {
-        font-size: 2rem;
+    header {
+        padding: 0.5rem 1rem; /* Reduce padding for mobile */
     }
 
-    #hero p {
-        font-size: 1rem;
+    header p {
+        font-size: 1.2rem;
     }
 
-    nav ul li a {
-        font-size: 0.9rem;
+    /* Show the hamburger menu */
+    .menu-icon {
+        display: flex;
+    }
+
+    /* Hide the navigation links by default */
+    #nav {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        background-color: #333;
+        z-index: 999;
+    }
+
+    /* When the menu is open, display the nav links */
+    nav.active {
+        display: block;
+    }
+
+    #nav ul {
+        display: block;
+        width: 100%;
+    }
+
+    #nav ul li {
+        width: 100%;
+        padding: 1rem;
+        text-align: center;
+        margin: 0;
     }
 }
 
-@media (max-width: 480px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
+/* Display normal navigation for screens above 768px (laptops, desktops) */
+@media (min-width: 769px) {
+    .menu-icon {
+        display: none;
     }
 
-    nav ul {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    #hero h2 {
-        font-size: 1.5rem;
-    }
-
-    #hero p {
-        font-size: 0.9rem;
+    nav {
+        display: flex; /* Standard nav display */
+        gap: 1.5rem;
+        flex-direction: row;
     }
 }

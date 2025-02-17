@@ -9,7 +9,12 @@
 <body>
     <header>
         <p>Brodric Young: Project Portfolio</p>
-        <nav>
+        <div class="menu-icon" id="menu-icon">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <nav id="nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="web-projects.html">Web Projects</a></li>
@@ -74,5 +79,14 @@
     <footer>
         <p>&copy; 2025 Brodric Young</p>
     </footer>
+
+    <script>
+        const menuIcon = document.getElementById("menu-icon");
+        const nav = document.getElementById("nav");
+    
+        menuIcon.addEventListener("click", () => {
+            nav.classList.toggle("active");
+        });
+    </script>    
 </body>
 </html>
