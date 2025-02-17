@@ -147,5 +147,15 @@
     <footer>
         <p>&copy; 2025 Brodric Young</p>
     </footer>
+
+    <!-- toggle menu for smaller screens -->
+    <script>
+        const menuIcon = document.getElementById("menu-icon");
+        const nav = document.getElementById("nav");
+    
+        menuIcon.addEventListener("click", () => {
+            nav.classList.toggle("active");
+        });
+    </script> 
 </body>
 </html>
