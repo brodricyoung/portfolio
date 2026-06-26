@@ -1,0 +1,76 @@
+<!-- contact page html file -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D6RF2SN49L"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D6RF2SN49L');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me | Brodric Young</title>
+    
+    <link rel="stylesheet" href="../css-components/global.css">
+    <link rel="stylesheet" href="../css/contact.css">
+
+</head>
+<body>
+    <div id="overlay"></div>
+    
+    <div id="header"></div>
+    
+    <div id="hero">
+        <h2>Contact Me</h2>
+        <p>If you’d like to collaborate or learn more about my work, feel free to reach out!</p>
+    </div>
+    
+    <section id="contact-container">
+        <div class="contact-form-container">
+            <h2>Send a Message</h2>
+            <form id="contact-form" action="https://formspree.io/f/xgvodvrg" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required />
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required />
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+            
+            <div id="form-feedback" style="margin-top: 10px; color: green; display: none;">
+                Your message has been sent successfully!
+            </div>
+            <div id="form-error" style="margin-top: 10px; color: red; display: none;">
+                An error occurred. Please try again later.
+            </div>
+        </div>
+        
+        <div class="contact-info-container">
+            <h2>Contact Information</h2>
+            <p>Email: <a href="mailto:youngbrodric10@gmail.com">youngbrodric10@gmail.com</a></p>
+            <p id="connect">Connect with me on:</p>
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/brodric-young" target="_blank">LinkedIn</a>
+                <a href="https://github.com/brodricyoung" target="_blank">GitHub</a>
+                <a href="www.youtube.com/@brodricyoung1911" target="_blank">YouTube</a>
+            </div>
+            <p>Or view my resume here:</p>
+            <a href="../files/resume.pdf" download="Brodric_Young_Resume.pdf">Download Resume (PDF)</a>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script src="../js/html-components.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/contact.js"></script>
+</body>
+</html>

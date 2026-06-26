@@ -1,0 +1,75 @@
+/* About Me Page CSS (cleaned & scoped) */
+
+/*///////////////////////////////////////////////////////////////////////
+    About Page Layout
+///////////////////////////////////////////////////////////////////////*/
+
+.page-container {
+    width: 80%;
+    margin: 60px auto;
+    background: var(--color-white);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}
+
+.page-container h2 {
+    font-family: var(--heading-family-fonts);
+    font-size: var(--font-size-1);
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--color-primary);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+
+/*///////////////////////////////////////////////////////////////////////
+    About Content Layout
+///////////////////////////////////////////////////////////////////////*/
+
+.about-content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.about-image {
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.about-text ul {
+    margin-left: 40px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+
+/*///////////////////////////////////////////////////////////////////////
+    Mobile Adjustments (About Page Only)
+///////////////////////////////////////////////////////////////////////*/
+
+@media (max-width: 940px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-image {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .page-container {
+        width: 95%;
+        padding: 20px;
+    }
+}
