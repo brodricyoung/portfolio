@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const isHome = window.location.pathname.endsWith("index.html") ||
                    window.location.pathname === "/";
 
-    const base = isHome ? "" : "../";
+    const base = isHome ? "./" : "../";
 
     await loadComponent("header", `${base}html-components/header.html`);
     await loadComponent("footer", `${base}html-components/footer.html`);
