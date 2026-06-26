@@ -5,6 +5,11 @@ async function loadComponent(id, file) {
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-    await loadComponent("header", "../html-components/header.html");
-    await loadComponent("footer", "../html-components/footer.html");
+    const isHome = window.location.pathname.endsWith("index.html") ||
+                   window.location.pathname === "/";
+
+    const base = isHome ? "" : "../";
+
+    await loadComponent("header", `${base}html-components/header.html`);
+    await loadComponent("footer", `${base}html-components/footer.html`);
 });
