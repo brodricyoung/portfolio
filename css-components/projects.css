@@ -33,7 +33,8 @@
     transform: scale(1.05); 
 }
 
-.no-link-project {
+.project-card h2.no-link-project,
+.project-card h4.no-link-project {
     color: #054992;
     display: inline-block;
     padding-top: 15px;
