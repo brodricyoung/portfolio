@@ -5,6 +5,6 @@ async function loadComponent(id, file) {
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-    await loadComponent("header", "/portfolio/html-components/header.html");
-    await loadComponent("footer", "/portfolio/html-components/footer.html");
+    await loadComponent("header", "../html-components/header.html");
+    await loadComponent("footer", "../html-components/footer.html");
 });
